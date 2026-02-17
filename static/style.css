@@ -1,35 +1,86 @@
+/* 1. Global Reset aur Background */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Gradient Background jo modern lagta hai */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
-.h2{
-    align-items: center;
-    color: chocolate;
-}
+
+/* 2. Advanced Login Container */
 .login-container {
-    background: rgb(198, 236, 181);
-    padding: 80px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.9); /* Thoda sa transparent */
+    padding: 40px;
+    width: 350px;
+    border-radius: 15px;
+    /* Deep Shadow for 3D effect */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
 }
+
+.login-container:hover {
+    transform: translateY(-5px); /* Hover par thoda upar uthega */
+}
+
+/* 3. Heading Style */
+h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    border-bottom: 2px solid #764ba2;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 4. Input Fields Styling */
 input {
     display: block;
     width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
 }
+
+input:focus {
+    border-color: #764ba2; /* Focus hone par purple border */
+    background: #fff;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
+}
+
+/* 5. Modern Button with Animation */
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    padding: 12px;
+    background: linear-gradient(to right, #667eea, #764ba2);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: opacity 0.3s, letter-spacing 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+    letter-spacing: 1px; /* Hover par text thoda failega */
+}
+
+button:active {
+    transform: scale(0.98); /* Click karne par dabne wala effect */
 }
