@@ -141,3 +141,80 @@ body::after {
     0%, 100% { transform: translateY(0) scale(1); }
     50% { transform: translateY(-50px) scale(1.2); }
 }
+
+/* --- Header Styling --- */
+
+    
+
+header {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; Yeh line content ko screen se bahar nikalne se rokegi; */
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 20px 50px; */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05); /* Light glass effect */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00d2ff;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin-left: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+header ul li a:hover {
+    opacity: 1;
+    color: #00d2ff;
+    text-shadow: 0 0 10px #00d2ff;
+}
+
+/* --- Footer Styling --- */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+footer a {
+    color: #00d2ff;
+    text-decoration: none;
+}
+
